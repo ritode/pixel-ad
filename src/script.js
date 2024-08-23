@@ -68,6 +68,11 @@ const content = {
         showProduct(currentIndex);
       });
     });
+  
+    // Event listener for the "Learn More" button to open google.com
+    document.querySelector('.learn-more-btn').addEventListener('click', () => {
+      window.open('https://www.google.com', '_blank');
+    });
   }
   
   function transitionFrames() {
@@ -85,6 +90,17 @@ const content = {
       }
     });
   }
+  
+  // Modal functionality
+  document.querySelectorAll('.terms-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelector('.modal-overlay').style.display = 'flex';
+    });
+  });
+  
+  document.querySelector('.close-modal').addEventListener('click', () => {
+    document.querySelector('.modal-overlay').style.display = 'none';
+  });
   
   renderFrame1();
   setTimeout(transitionFrames, 4000);
