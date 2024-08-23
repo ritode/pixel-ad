@@ -52,13 +52,16 @@ const content = {
           <span class="price-large">${products[index].price.split(' ')[1]}</span>
           <span class="price-small">${products[index].price.split(' ')[2]}/month</span>
         `;
+      
         productImage.src = products[index].image;
         priceElement.innerHTML = priceHTML;
+      
+        gsap.from(".price", { duration: 1, x: -100, opacity: 0 });
+      
         dots.forEach(dot => dot.classList.remove('active'));
         dots[index].classList.add('active');
-    }
-    
-  
+      }
+      
     showProduct(currentIndex);
   
     let carouselInterval = setInterval(() => {
