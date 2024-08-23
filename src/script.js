@@ -47,11 +47,17 @@ const content = {
     const dots = document.querySelectorAll('.dot');
   
     function showProduct(index) {
-      productImage.src = products[index].image;
-      priceElement.textContent = products[index].price;
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
+        const priceHTML = `
+          <span class="price-symbol">$</span>
+          <span class="price-large">${products[index].price.split(' ')[1]}</span>
+          <span class="price-small">${products[index].price.split(' ')[2]}/month</span>
+        `;
+        productImage.src = products[index].image;
+        priceElement.innerHTML = priceHTML;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
     }
+    
   
     showProduct(currentIndex);
   

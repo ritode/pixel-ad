@@ -5,10 +5,11 @@ body {
 }
 
 h1, p {
-    margin: 2px 0;
+    margin: 3px 0;
+    font-size: 24px;
 }
 h2{
-    font-size: 13px;
+    font-size: 26px;
     margin: 4px 0;
 }
 p {
@@ -28,7 +29,8 @@ p {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
+    padding-right: 0.25rem;
     display: flex;
     flex-flow: column;
     background: url('../public/assets/300x250_DCO_MockTest_BG.png') no-repeat;
@@ -48,7 +50,7 @@ p {
 }
 
 .frame-content {
-    margin: auto;
+    margin: auto 0;
     text-align: left;
 }
 
@@ -58,30 +60,43 @@ p {
 }
 
 .headline-highlighted {
-    font-size: 24px;
     color: #EE0000;
     font-weight: bold;
     text-align: left;
 }
 
 .headline {
-    font-size: 18px;
     color: #202237;
     text-align: left;
 }
 
 .subtext {
-    font-size: 14px;
     color: gray;
     text-align: left;
 }
 
 .price {
-    font-size: 22px;
-    color: #EE0000;
     font-weight: bold;
+    color: #EE0000;
     text-align: left;
+    display: flex;
+    align-items:flex-start;
 }
+
+.price-symbol {
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.price-large {
+    font-size: 26px; 
+    margin-right: 2px;
+}
+
+.price-small {
+    font-size: 16px;
+}
+
 
 .learn-more-btn {
     font-size: 16px;
@@ -96,7 +111,7 @@ p {
 .terms-btn {
     position: absolute;
     bottom: 10px;
-    left: 20px;
+    left: 10px;
     font-size: 12px;
     background: none;
     border: none;
@@ -106,7 +121,6 @@ p {
 
 .carousel {
     position: relative;
-    width: 100%; 
     height: 150px; 
     display: flex;
     flex-direction: column;
