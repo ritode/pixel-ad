@@ -1,0 +1,27 @@
+{
+    "frame1": {
+      "headline-highlighted": "The phones you want",
+      "headline": "at the speed you need"
+    },
+    "frame2": {
+      "headline-highlighted": "Free",
+      "headline": "5G phones",
+      "subtext": "with qualified plan purchase",
+      "products": [
+        {
+          "image": "/assets/300x250_DCO_MockTest_product01.png",
+          "price": "$ 3 99 /month"
+        },
+        {
+          "image": "/assets/300x250_DCO_MockTest_product02.png",
+          "price": "$ 4 99 /month"
+        },
+        {
+          "image": "/assets/300x250_DCO_MockTest_product03.png",
+          "price": "$ 5 99 /month"
+        }
+      ],
+      "buttonText": "Learn More"
+    }
+  }
+  

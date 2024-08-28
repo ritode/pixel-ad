@@ -2,12 +2,17 @@
   "name": "pixel-ad",
   "version": "1.0.0",
   "description": "Pixel Wireless Ad",
-  "main": "src/script.js",
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "gsap": "^3.12.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "vite": "^5.3.3",
+    "vite-plugin-restart": "^0.4.1"
+  }
 }

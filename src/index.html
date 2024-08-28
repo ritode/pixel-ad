@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pixel Wireless Ad - Frame 1 & Frame 2</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Wireless Ad</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
-  <div id="ad-container">
-    <!-- Frame 1 -->
-    <div class="frame frame1">
-      <img src="../public/assets/300x250_DCO_MockTest_logo.png" alt="Pixel Wireless Logo" class="logo">
-      <div class="frame-content">
-        <h1 class="headline-highlighted"></h1>
-        <h1 class="headline"></h1>
-      </div>
-      <button class="terms-btn">*Full terms</button>
-    </div>
-
-    <!-- Frame 2 -->
-    <div class="frame frame2">
-      <img src="../public/assets/300x250_DCO_MockTest_logo.png" alt="Pixel Wireless Logo" class="logo">
-      <div class="frame-content">
-        <div>
-          <h1 class="headline-highlighted"></h1>
-          <h1 class="headline"></h1>
-          <p class="subtext"></p>
-          <p class="price">
-            <span class="price-symbol">$</span>
-            <span class="price-large">3</span>
-            <span class="price-small">99/month</span>
-          </p>          
-        </div>
-        <div class="carousel">
-          <img src="" alt="Product Image" class="product-image">
-          <div class="dots">
-            <span class="dot" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
+    <div class="ad-container">
+        <!-- Frame 1 -->
+        <div class="frame frame1">
+          <img src="/assets/300x250_DCO_MockTest_logo.png" alt="Pixel Wireless Logo" class="logo">
+          <div class="frame-content">
+            <h1 class="headline-highlighted"></h1>
+            <h1 class="headline"></h1>
           </div>
-          <button class="learn-more-btn">Learn More</button>
+          <button class="terms-btn">*Full terms</button>
         </div>
+    
+        <!-- Frame 2 -->
+        <div class="frame frame2">
+          <img src="/assets/300x250_DCO_MockTest_logo.png" alt="Pixel Wireless Logo" class="logo">
+          <div class="frame-content">
+            <div class="frame-content-text">
+              <div>
+              <h1 class="headline-highlighted"></h1>
+              <h1 class="headline"></h1>
+              <p class="subtext"></p>
+            </div>
+              <p class="price">
+                <span class="price-medium">$</span>
+                <span class="price-large">3</span>
+                <span class="price-medium">99</span>
+                <span class="price-small">/month</span>
+              </p>          
+            </div>
+            <div class="carousel">
+              <img src="" alt="Product Image" class="product-image">
+              <div class="dots">
+                <span class="dot" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+              </div>
+              <button class="learn-more-btn">Learn More</button>
+            </div>
+          </div>
+          <button class="terms-btn">*Full terms</button>
+        </div>
+    
+        <!-- Modal for Terms and Conditions -->
+        <div class="modal-overlay">
+          <div class="modal-content">
+            <h3>Terms and Conditions</h3>
+            <p>Cell phones are often associated with a high cost, which may deter people from upgrading to a new device. But that doesn't have to be the case. If you're wondering how to get these great deals, start by exploring the multiple free phone promotion options that exist currently. By now you should have figured out this is all gibberish. But it would be really nice to see you make this pop out from the bottom. A nice animation with a rubberband effect will be an icing on the cake. Adobe designers, though at the Himalayas, are really something.</p>
+            <button class="close-modal">&times;</button>
+          </div>
+        </div>
+    
       </div>
-      <button class="terms-btn">*Full terms</button>
-    </div>
-
-    <!-- Modal for Terms and Conditions -->
-    <div class="modal-overlay">
-      <div class="modal-content">
-        <h3>Terms and Conditions</h3>
-        <p>Cell phones are often associated with a high cost, which may deter people from upgrading to a new device. But that doesn't have to be the case. If you're wondering how to get these great deals, start by exploring the multiple free phone promotion options that exist currently. By now you should have figured out this is all gibberish. But it would be really nice to see you make this pop out from the bottom. A nice animation with a rubberband effect will be an icing on the cake. Adobe designers, though at the Himalayas, are really something.</p>
-        <button class="close-modal">&times;</button>
-      </div>
-    </div>
-
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
-  <script src="script.js"></script>
+    <script type="module" src="./script.js"></script>
 </body>
 </html>
