@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #EE0000;
+    --secondary-color: #202237;
+}
+
 /* Common Styles */
 body {
     margin: 0;
@@ -38,48 +43,68 @@ p {
     flex-flow: column;
     background: url('/assets/300x250_DCO_MockTest_BG.png') no-repeat;
     background-size: cover;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s, visibility 1s;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInBackground 1s forwards ease-in; /* Fade-in animation */
 }
-/* Frame 1 */
-.frame1 {
-    opacity: 1;
-    visibility: visible;
+.particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .particle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-
 .logo {
     width: 100px;
 }
 
-.frame-content {
+.frame1-content {
     margin: auto 0;
     text-align: left;
 }
+
 /* Frame 2 */
-.frame2 .frame-content {
-    display: flex;
+
+.frame2-content {
+    display: none;
+    /* display: flex; */
     align-items: center;
     justify-content: space-between;
 }
-.frame2 .frame-content .frame-content-text{
+.frame2-content .frame-content-text{
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
     height: 100%;
 }
 .headline-highlighted {
-    color: #EE0000;
+    color: var(--primary-color);
 }
 
 .headline {
-    color: #202237;
+    color: var(--secondary-color);
 }
 
 /* Price */
 .price {
     font-weight: bold;
-    color: #EE0000;
+    color: var(--primary-color);
     text-align: left;
     display: flex;
     align-items:flex-start;
@@ -132,7 +157,9 @@ p {
     height: 110px;
     object-fit: contain;
 }
-
+.product-image:hover{
+    scale: 1.15;
+}
 .dots {
     display: flex;
     justify-content: center;
@@ -150,12 +177,12 @@ p {
 }
 
 .dot.active {
-    background-color: #202237;
+    background-color: var(--secondary-color);
 }
 
 .learn-more-btn {
     font-size: 16px;
-    background-color: #EE0000;
+    background-color: var(--primary-color);
     color: white;
     padding: 5px 10px;
     border: none;
@@ -164,6 +191,13 @@ p {
     margin-top: auto;
 }
 
+.learn-more-btn:hover {
+    transform: scale(1.1);
+    background-color: #eee;
+    color: var(--primary-color);
+    font-weight: 700;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
 
 /* Modal Styles */
 .modal-overlay {
@@ -171,26 +205,46 @@ p {
     top: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .modal-content {
-    background: rgba(0, 0, 0, 0.777);
-    padding: 10px;
-    border-radius: 10px;
+    background: #333; 
+    padding: 15px;
+    border-radius: 12px; 
     position: relative;
-    color: white;
+    color: #f1f1f1; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+    animation: modalFadeIn 0.4s ease-in-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .close-modal {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 10px; 
+    right: 15px;
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: white;
+    color: #f1f1f1; 
+    transition: color 0.3s ease-in-out; 
+}
+
+.close-modal:hover {
+    color: var(--primary-color);
 }
